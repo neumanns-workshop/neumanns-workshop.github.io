@@ -1,0 +1,320 @@
+/* Base styles */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+:root {
+    --charcoal: #252525;
+    --dark-charcoal: #151515;
+    --light-hanji: #F5F0E6;
+    --medium-hanji: #E8DEC9;
+    --dark-hanji: #D1C3A9;
+    --ink: #1A1A1A;
+    --accent: #7D6E5D;
+    --text: #252525;
+    --border: #A69781;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-hanji);
+    color: var(--text);
+}
+
+/* Header and Navigation */
+header {
+    background-color: var(--charcoal);
+    border-bottom: 2px solid var(--border);
+    padding: 1rem 1rem 0.5rem 1rem;
+    text-align: center;
+}
+
+.header-content {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    text-decoration: none;
+}
+
+.logo h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 4em;
+    font-weight: 400;
+    margin: 1rem 1rem 0 1rem;
+    padding: 0;
+    border: none;
+    color: var(--light-hanji);
+    transition: color 0.3s ease;
+}
+
+.logo:hover h1 {
+    color: var(--medium-hanji);
+}
+
+nav {
+    width: 100%;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: var(--medium-hanji);
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--light-hanji);
+}
+
+/* Typography */
+h1, h2, h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    color: var(--ink);
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+/* Page Headers */
+.page-header {
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 2em;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+/* Card styles */
+.card {
+    background-color: var(--medium-hanji);
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+.card .page-header {
+    background-color: var(--dark-hanji);
+    padding: 1rem;
+    margin-bottom: 0;
+    border-bottom: 2px solid var(--border);
+}
+
+.card .page-header h2 {
+    margin: 0;
+    color: var(--ink);
+}
+
+.card section {
+    padding: 1.5rem;
+    border-bottom: none;
+}
+
+/* Layout adjustments */
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: var(--light-hanji);
+    box-shadow: none;
+    border: none;
+}
+
+section {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--border);
+}
+
+/* Form styles */
+form {
+    display: grid;
+    gap: 1rem;
+}
+
+label {
+    font-weight: 400;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid var(--border);
+    background-color: var(--light-hanji);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
+button {
+    background-color: var(--accent);
+    color: var(--light-hanji);
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+button:hover {
+    background-color: var(--charcoal);
+}
+
+/* Blog post styles */
+#blog-posts article {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--border);
+}
+
+#blog-posts .date {
+    font-style: italic;
+    color: var(--accent);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: var(--charcoal);
+    border-top: 2px solid var(--border);
+    font-size: 0.8em;
+    color: var(--medium-hanji);
+}
+
+/* Services Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.services-grid .card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.services-grid .page-header {
+    flex-shrink: 0;
+}
+
+.services-grid .service {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Adjust card styles for services */
+.services-grid .card .page-header h2 {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+/* Blog Grid */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.blog-grid .card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-grid .page-header {
+    flex-shrink: 0;
+}
+
+.blog-grid .blog-post {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-grid .card .page-header h2 {
+    font-size: 1.5em;
+    margin-bottom: 0.5rem;
+}
+
+.blog-grid .date {
+    font-style: italic;
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+
+.blog-grid .blog-content {
+    flex-grow: 1;
+}
+
+/* Responsive design */
+@media (max-width: 840px) {
+    .header-content {
+        padding: 0 10px;
+    }
+
+    main {
+        margin: 10px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    .logo h1 {
+        font-size: 2em;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+}
