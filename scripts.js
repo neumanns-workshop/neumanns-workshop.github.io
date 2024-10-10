@@ -1,5 +1,5 @@
 async function fetchBlogPosts() {
-    const response = await fetch('https://api.github.com/repos/YOUR_USERNAME/YOUR_REPO_NAME/contents/blog');
+    const response = await fetch('https://api.github.com/repos/neumanns-workshop/neumanns-workshop.github.io/contents/blog');
     const files = await response.json();
     
     const blogPosts = await Promise.all(files
